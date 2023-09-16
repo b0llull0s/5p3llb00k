@@ -5,17 +5,6 @@ sudo iptables -F
 sudo iptables -P INPUT DROP
 sudo iptables -P FORWARD DROP
 sudo iptables -P OUTPUT DROP
-#MONITORING
-sudo ss -tuln           
-htop
-wireshark&
-#BLEACHBIT
-read -p "Crash? (yes/no): " choice
-if [[ $choice == "yes" ]]; then
-        sudo bleachbit
-elif [[ $choice == "no" ]]; then
-    echo "Operation canceled."
-fi
 #IPTABLES ACCEPT
 execute_flag="no"               #FLAG OPTION -x
 while getopts "x" opt; do
@@ -33,3 +22,15 @@ if [ "$execute_flag" == "yes" ]; then
   sudo iptables -P INPUT ACCEPT
   sudo iptables -P FORWARD ACCEPT
   sudo iptables -P OUTPUT ACCEPT
+fi
+#MONITORING
+sudo ss -tuln           
+htop
+wireshark&
+#BLEACHBIT
+read -p "Crash? (yes/no): " choice
+if [[ $choice == "yes" ]]; then
+        sudo bleachbit
+elif [[ $choice == "no" ]]; then
+    echo "Operation canceled."
+fi
