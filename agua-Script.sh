@@ -1,5 +1,4 @@
-!#/bin/bash
-
+#!/bin/bash
 
 #IPTABLES TO DROP
 sudo iptables -F
@@ -11,11 +10,12 @@ sudo ss -tuln
 htop
 wireshark&
 #BLEACHBIT
-read -p "Do you want to run 'sudo bleachbit'? (yes/no): " choice
+read -p "Crash? (yes/no): " choice
 if [[ $choice == "yes" ]]; then
         sudo bleachbit
 elif [[ $choice == "no" ]]; then
     echo "Operation canceled."
+fi
 #IPTABLES ACCEPT
 execute_flag="no"               #FLAG OPTION -x
 while getopts "x" opt; do
@@ -29,7 +29,7 @@ while getopts "x" opt; do
   esac
 done
 if [ "$execute_flag" == "yes" ]; then
-  echo "Executing commands because -x option was provided."
+  echo "Flow"
   sudo iptables -P INPUT ACCEPT
   sudo iptables -P FORWARD ACCEPT
   sudo iptables -P OUTPUT ACCEPT
