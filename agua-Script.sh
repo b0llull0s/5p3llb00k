@@ -32,6 +32,5 @@ elif [[ $choice == "no" ]]; then
 fi
 #MONITORING
 sudo ss -tuln           
-htop
 wireshark
-
+htop
