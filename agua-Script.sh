@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #IPTABLES TO DROP
 sudo iptables -F
 sudo iptables -P INPUT DROP
