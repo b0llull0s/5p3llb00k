@@ -19,19 +19,21 @@ htop
 ps -auxwf
 #IPTABLES ACCEPT
 execute_flag="no"               #FLAG OPTION -x
-while getopts "x" opt; do
-  case $opt in
-    x)
-      execute_flag="yes"
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG" >&2
-      ;;
-  esac
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -x)
+            execute_flag="yes"
+            shift
+            ;;
+        *)
+            echo "Invalid option: $1" >&2
+            exit 1
+            ;;
+    esac
 done
 if [ "$execute_flag" == "yes" ]; then
-  echo "Flow"
-  sudo iptables -P INPUT ACCEPT
-  sudo iptables -P FORWARD ACCEPT
-  sudo iptables -P OUTPUT ACCEPT
+    echo "Flow"
+    sudo iptables -P INPUT ACCEPT
+    sudo iptables -P FORWARD ACCEPT
+    sudo iptables -P OUTPUT ACCEPT
 fi
