@@ -9,7 +9,6 @@ sudo iptables -P OUTPUT DROP
 #MONITORING
 sudo ss -tuln           
 htop
-ps -auxwf
 wireshark&
 #BLEACHBIT
 read -p "Do you want to run 'sudo bleachbit'? (yes/no): " choice
