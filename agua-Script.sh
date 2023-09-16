@@ -23,6 +23,8 @@ if [ "$execute_flag" == "yes" ]; then
   sudo iptables -P FORWARD ACCEPT
   sudo iptables -P OUTPUT ACCEPT
 fi
+#CHECK PORTS
+sudo ss -tuln  
 #BLEACHBIT
 read -p "Crash? (yes/no): " choice
 if [[ $choice == "yes" ]]; then
@@ -31,6 +33,6 @@ elif [[ $choice == "no" ]]; then
     echo "Operation canceled."
 fi
 #MONITORING
-sudo ss -tuln           
-wireshark
-htop
+htop&
+wireshark&
+
