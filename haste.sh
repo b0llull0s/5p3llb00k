@@ -9,8 +9,9 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 cd "$DIRECTORY" || exit 1
 # IP to /etc/hosts
-echo "$IP" | sudo tee -a /etc/hosts
+echo "$IP $DIRECTORY" | sudo tee -a /etc/hosts
 # Haste Nmap
 nmap -sT -p- --min-rate 10000 -vvv "$IP" -oG nmap.txt
 
-echo "Ready to pwnd. $DIRECTORY deployed."
+echo "$DIRECTORY deployed.Ready to pwnd."
+cd "$DIRECTORY"
