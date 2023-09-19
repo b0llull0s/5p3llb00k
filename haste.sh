@@ -14,5 +14,4 @@ echo "$IP $DIRECTORY" | sudo tee -a /etc/hosts
 nmap -sT -p- --min-rate 10000 -vvv "$IP" -oG nmap.txt
 
 echo "$DIRECTORY deployed.Ready to pwnd."
-cd "$DIRECTORY"
 ls
