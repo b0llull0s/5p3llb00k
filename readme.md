@@ -7,5 +7,5 @@
 # skellies ## Python ## Generate reverse shells
 # haste ## Bash ## Add ip and hostname to /etc/hosts Create new folder and run nmap scan
 # poke ## Bash ## Curl and grep
-# portal ## Bash ## Set netcat listening a HTTP Python server ***Ad IPV6 version with sortcat
+# portal ## Bash ## Set netcat listening a HTTP Python server ***Ad IPV6 version with socat
 #
