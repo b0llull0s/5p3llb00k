@@ -11,7 +11,7 @@ cd "$DIRECTORY" || exit 1
 # IP to /etc/hosts
 echo "$IP $DIRECTORY" | sudo tee -a /etc/hosts
 # Haste Nmap
-nmap -sT -p- --min-rate 10000 -vvv "$IP" -oG nmap.txt
+nmap -sT -p- -Pn --min-rate 10000 -vvv "$IP" -oG nmap.txt
 
 echo "$DIRECTORY deployed.Ready to pwnd."
 ls
