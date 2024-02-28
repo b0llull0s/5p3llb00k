@@ -1,7 +1,10 @@
 # List of Spells
-up Bash Quick Update
-agua Bash Rise IPTABLES, ss Open Ports, Ask Bleachbeat for wiping RAM, Process monitoring
-Haste Bash Add ip and hostname to /etc/hosts Create new folder and run nmap scan
+## up 
+Bash - Quick Update
+## agua
+Bash - Network and Performance Monitoring
+## Haste 
+Bash - CTF - Set up Host file from target - Fast All Open ports
  luz Bash File enumeration...
 poke Bash Curl...
 skellies 
