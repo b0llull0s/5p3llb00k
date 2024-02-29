@@ -1,5 +1,31 @@
 #!/bin/bash
-# b0llull0s@P4n1cThr3ads 
+# 
+###########################################################
+#        Automatic System Updater Script                  #
+#                                                         #
+# Author: b0llull0s                                       #
+# Original Repo: https://github.com/b0llull0s/5p3llb00k   #
+# License: MIT License for original code,                 #
+#          GNU General Public License (GPL) for combined  #
+#          code that includes GPL licensed components     #
+#                                                         #
+# Description:                                            #
+# This script updates the system packages for either      #
+# Arch, Kali or Redhat Linux, providing the user with     #
+# an option to choose between the distributions.          #
+#                                                         #
+# Usage:                                                  #
+#   ./up.sh [Distribution]                                #
+#   Supported distributions: Kali,Arch,RedHat             #
+#   If no distribution is provided, the script prompts    #
+#   the user to choose one.                               #
+#                                                         #
+# Note:                                                   #
+#   This script is provided as-is without any warranties. #
+#   You are free to use, modify, and distribute it.       #
+#                                                         #
+# GitHub: https://github.com/b0llull0s                    #
+###########################################################
 # Define colors
 PURPLE='\033[0;35m'
 GREEN='\033[0;32m'
@@ -34,6 +60,10 @@ else
   # Arch Loop
         sudo pacman -Syu --noconfirm
         echo -e "${GREEN}Arch Linux update complete.${NC}"
+  # Red Hat Loop
+    elif [[ "$distribution" == "Redhat" ]]; then
+        sudo yum update -y
+        echo -e "${GREEN}Red Hat-based distribution update complete.${NC}"
     else
   # Invalid Error
         echo -e "${RED}Invalid option. Exiting.${NC}"
