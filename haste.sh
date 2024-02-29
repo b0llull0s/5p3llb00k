@@ -1,46 +1,67 @@
 #!/bin/bash
 # b0llull0s@P4n1cThr3ads
-# Styling
+#
+###########################################################
+#               Haste Spell - Fast Nmap Scan             #
+#                                                         #
+# Author: b0llull0s                                       #
+# 5p3llb00k Repository: https://github.com/b0llull0s/5p3llb00k #
+# License: The Mystic MIT License for original incantations,#
+ #          and the Enchanted GPL for combined spells that   #
+#          harness GPL enchanted components                 #
+ #                                                          #
+# Description:                                             # 
+# This enchanted spell, "Haste", accelerates the innitial #
+# processes during CTF. Allowing you to swiftly explore   #
+# arcane networks.                                         #
+ #                                                          #
+## Usage ##                                                  #
+#   ./haste.sh [IP] [Name]                                    #
+## Usage examples ##                                        #
+#   - ./haste.sh 10.10.1.20 lame.htb                       #
+ #                                                          #
+#   The spell will swiftly reveal the mystic secrets of    #
+ #  the target network.                                     #
+#                                                          #
+## Note:                                                   #
+#   This enchanted spell is provided as-is without any      #
+ #   warranties. You are free to use, modify, and          #
+#   distribute it, but beware of the magical consequences.#
+#                                                          #
+# Github: https://github.com/b0llull0s                    #
+###########################################################
 RED='\033[0;31m'
 PURPLE='\033[0;35m'
 GREEN='\033[0;32m'
-NC='\033[0m' # No Color
-# Function to print error messages in red
+NC='\033[0m'
 error_msg() {
     echo -e "${RED}Error: $1${NC}" >&2
 }
-# Function to print success messages in green
 success_msg() {
     echo -e "${GREEN}$1${NC}"
 }
-# Function to print informational messages in purple
 info_msg() {
     echo -e "${PURPLE}$1${NC}"
 }
-# Check if required arguments are provided
+## Usage ## 
 if [ $# -ne 2 ]; then
     error_msg "Usage: $0 <IP_ADDRESS> <DIRECTORY_NAME>"
     exit 1
 fi
-# Values 
+## Values ## 
 IP="$1"
 DIRECTORY="$2"
-# Create directory if it doesn't exist
+## Spell ## 
 if [ ! -d "$DIRECTORY" ]; then
     mkdir "$DIRECTORY" || { error_msg "Failed to create directory $DIRECTORY"; exit 1; }
 fi
-# Change into the directory
 cd "$DIRECTORY" || { error_msg "Failed to change into directory $DIRECTORY"; exit 1; }
-# Add entry to /etc/hosts
 echo "$IP $DIRECTORY" | sudo tee -a /etc/hosts > /dev/null || { error_msg "Failed to update /etc/hosts"; exit 1; }
-# Perform port scan
 info_msg "Haste $IP...!!"
 sudo nmap -p- --min-rate=10000 -oG ports.txt "$IP" || { error_msg "Nmap scan failed"; exit 1; }
-# Extract open ports and perform detailed scan
 SORTED_PORTS=$(grep -oP '([\d]+)/open' ports.txt | awk -F/ '{print $1}' | tr '\n' ',')
 info_msg "Performing detailed scan on ports: $SORTED_PORTS"
 sudo nmap -sCV -oA nmap -p "${SORTED_PORTS%,}" "$IP" || { error_msg "Detailed scan failed"; exit 1; }
-# Print completion message
 success_msg "$DIRECTORY deployed. Ready to pwn!"
 success_msg "Scan completed. Results saved in nmap.gnmap, nmap.xml, and nmap.txt"
 ls
