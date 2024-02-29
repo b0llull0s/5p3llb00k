@@ -2,8 +2,8 @@
 # b0llull0s@P4n1cThr3ads
 #
 ###########################################################
-#               Haste Spell - Fast Nmap Scan             #
-#                                                         #
+ #               Haste Spell                              #
+#                                                          #
 # Author: b0llull0s                                       #
 # 5p3llb00k Repository: https://github.com/b0llull0s/5p3llb00k #
 # License: The Mystic MIT License for original incantations,#
