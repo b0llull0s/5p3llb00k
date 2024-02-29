@@ -1,6 +1,6 @@
 # List of Spells
 ## up 
-Bash - Quick Update
+Bash - Quick Update for Linux Distributions
 ## agua
 Bash - Network and Performance Monitoring
 ## Haste 
