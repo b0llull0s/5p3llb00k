@@ -1,7 +1,7 @@
 # List of Spells
-## up 
+## Up 
 Bash - Quick Update for Linux base Distributions
-## agua
+## Agua
 Bash - Network and Performance Monitoring
 ## Haste 
 Bash - CTF - Set up Host file from target - Fast All Open ports
