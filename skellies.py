@@ -50,19 +50,19 @@ def write_to_file(data):
 while True:
     try:
         print(bcolors.PURPLE+"Welcome to Skellies Generator!"+bcolors.ENDC)
-        num_combinations=int(input(bcolors.BLUE+"How many different username and password combinations do you want? "+ bcolors.ENDC))
+        num_combinations=int(input(bcolors.PURPLE+"How many different username and password combinations do you want? "+ bcolors.ENDC))
         if num_combinations<1:
             print(bcolors.RED+"Invalid number of combinations."+bcolors.ENDC)
             continue
-        password_length=int(input(bcolors.BLUE+"Enter the desired length of the password: "+bcolors.ENDC))
-        repeat_email=input(bcolors.BLUE+"Do you want to repeat the same email for all combinations? (yes/no): "+bcolors.ENDC).lower()=="yes"
+        password_length=int(input(bcolors.PURPLE+"Enter the desired length of the password: "+bcolors.ENDC))
+        repeat_email=input(bcolors.PURPLE+"Do you want to repeat the same email for all combinations? (yes/no): "+bcolors.ENDC).lower()=="yes"
         if repeat_email:
             print("Choose an email from this list:\n",email_list)
-            email=input(bcolors.BLUE+"Email: "+bcolors.ENDC).lower()
+            email=input(bcolors.PURPLE+"Email: "+bcolors.ENDC).lower()
             if email not in email_list:
                 print(bcolors.RED+"Invalid email provider chosen."+bcolors.ENDC)
                 continue
-            hexname_length=int(input(bcolors.BLUE+"Desired length of the hexname? "+bcolors.ENDC))
+            hexname_length=int(input(bcolors.PURPLE+"Desired length of the hexname? "+bcolors.ENDC))
             email=email.split('@')[0]  # Resetting email to the original provider
             for _ in range(num_combinations):
                 email_with_hexname=generate_hex_email(email,hexname_length)
@@ -70,15 +70,15 @@ while True:
         else:
             for _ in range(num_combinations):
                 print("Choose an email from this list:\n",email_list)
-                email=input(bcolors.BLUE+"Email: "+bcolors.ENDC).lower()
+                email=input(bcolors.PURPLE+"Email: "+bcolors.ENDC).lower()
                 if email not in email_list:
                     print(bcolors.RED+"Invalid email provider chosen."+bcolors.ENDC)
                     continue
-                hexname_length=int(input(bcolors.BLUE+"Desired length of the hexname? "+bcolors.ENDC))
+                hexname_length=int(input(bcolors.PURPLE+"Desired length of the hexname? "+bcolors.ENDC))
                 email_with_hexname=generate_hex_email(email,hexname_length)
                 write_to_file(f"Email:{email_with_hexname},Password:{generate_password(password_length)}")
-                print(bcolors.BLUE+"Skeleton Raised!"+bcolors.ENDC)
-        another_round=input(bcolors.BLUE+"Do you want to raise more skeletons? (y/n): "+bcolors.ENDC).lower()
+                print(bcolors.PURPLE+"Skeleton Raised!"+bcolors.ENDC)
+        another_round=input(bcolors.PURPLE+"Do you want to raise more skeletons? (y/n): "+bcolors.ENDC).lower()
         if another_round!="y":
             break
     except ValueError:
