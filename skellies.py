@@ -1,6 +1,25 @@
 import random
 import string
-
+###########################################################
+#                       Skellies                           #
+#                                                          #
+# Author: b0llull0s                                       #
+# Original Repo: https://github.com/b0llull0s/5p3llb00k    #
+# License: The Mystic MIT License for original incantations,#
+ #          and the Enchanted GPL for combined spells that   #
+#          harness GPL enchanted components                 #
+ #                                                          #
+# Description:                                             # 
+# Summons hexadecimal                                     #
+# Special funeral                                        #
+# Upon Bones                                              #
+# Dust Hex                                                 #
+## Usage ##                                               #
+#   ./skellies.sh                                        #
+## Open skellies.txt ##                                   #
+#                                                        #
+# Github: https://github.com/b0llull0s                    #
+###########################################################
 # Colors for styling
 class bcolors:
     PURPLE='\033[95m'
