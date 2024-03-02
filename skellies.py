@@ -1,9 +1,16 @@
 import random
 import string
+
+# Colors for styling
+class bcolors:
+    PURPLE='\033[95m'
+    BLUE='\033[94m'
+    RED='\033[91m'
+    ENDC='\033[0m'
 ## Variables ##
 hex_characters='0123456789abcdef'
 email_list=["gmail","yahoo","outlook","proton"]
-## Hex username ##
+## Functions ##
 def generate_hex_email(email,hexname_length):
     hexname=''
     for _ in range(hexname_length):
@@ -12,7 +19,7 @@ def generate_hex_email(email,hexname_length):
         return hexname+"@"+email+".me"
     else:
         return hexname+"@"+email+".com"
-## Functions ##
+
 def generate_password(password_length):
     all_characters=string.ascii_letters+string.digits+string.punctuation
     return ''.join(random.choice(all_characters) for _ in range(password_length))
@@ -22,34 +29,39 @@ def write_to_file(data):
         file.write(data+"\n")
 ## Loop ##
 while True:
-    num_combinations = int(input("How many different username and password combinations do you want? "))
-    if num_combinations<1:
-        print("Invalid number of combinations.")
-        continue
-    password_length=int(input("Enter the desired length of the password: "))
-    repeat_email=input("Do you want to repeat the same email for all combinations? (yes/no): ").lower()=="yes"
-    if repeat_email:
-        print("Choose an email from this list:\n", email_list)
-        email=input("Email: ").lower()
-        if email not in email_list:
-            print("Invalid email provider chosen.")
+    try:
+        print(bcolors.PURPLE+"Welcome to Skellies Generator!"+bcolors.ENDC)
+        num_combinations=int(input(bcolors.BLUE+"How many different username and password combinations do you want? "+ bcolors.ENDC))
+        if num_combinations<1:
+            print(bcolors.RED+"Invalid number of combinations."+bcolors.ENDC)
             continue
-        hexname_length=int(input("Desired length of the hexname? "))
-        email=email.split('@')[0]  # Resetting email to the original provider
-        for _ in range(num_combinations):
-            email_with_hexname=generate_hex_email(email, hexname_length)
-            write_to_file(f"Email:{email_with_hexname},Password:{generate_password(password_length)}")
-    else:
-        for _ in range(num_combinations):
+        password_length=int(input(bcolors.BLUE+"Enter the desired length of the password: "+bcolors.ENDC))
+        repeat_email=input(bcolors.BLUE+"Do you want to repeat the same email for all combinations? (yes/no): "+bcolors.ENDC).lower()=="yes"
+        if repeat_email:
             print("Choose an email from this list:\n",email_list)
-            email=input("Email: ").lower()
+            email=input(bcolors.BLUE+"Email: "+bcolors.ENDC).lower()
             if email not in email_list:
-                print("Invalid email provider chosen.")
+                print(bcolors.RED+"Invalid email provider chosen."+bcolors.ENDC)
                 continue
-            hexname_length=int(input("Desired length of the hexname? "))
-            email_with_hexname=generate_hex_email(email,hexname_length)
-            write_to_file(f"Email:{email_with_hexname},Password:{generate_password(password_length)}")
-            print("Skelletons Raised!")
-    another_round=input("Do you want to raise more skelletons? (y/n): ").lower()
-    if another_round != "y":
-        break
+            hexname_length=int(input(bcolors.BLUE+"Desired length of the hexname? "+bcolors.ENDC))
+            email=email.split('@')[0]  # Resetting email to the original provider
+            for _ in range(num_combinations):
+                email_with_hexname=generate_hex_email(email,hexname_length)
+                write_to_file(f"Email:{email_with_hexname},Password:{generate_password(password_length)}")
+        else:
+            for _ in range(num_combinations):
+                print("Choose an email from this list:\n",email_list)
+                email=input(bcolors.BLUE+"Email: "+bcolors.ENDC).lower()
+                if email not in email_list:
+                    print(bcolors.RED+"Invalid email provider chosen."+bcolors.ENDC)
+                    continue
+                hexname_length=int(input(bcolors.BLUE+"Desired length of the hexname? "+bcolors.ENDC))
+                email_with_hexname=generate_hex_email(email,hexname_length)
+                write_to_file(f"Email:{email_with_hexname},Password:{generate_password(password_length)}")
+                print(bcolors.BLUE+"Skeleton Raised!"+bcolors.ENDC)
+        another_round=input(bcolors.BLUE+"Do you want to raise more skeletons? (y/n): "+bcolors.ENDC).lower()
+        if another_round!="y":
+            break
+    except ValueError:
+        print(bcolors.RED+"Please enter a valid number."+bcolors.ENDC)
+
