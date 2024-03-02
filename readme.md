@@ -5,11 +5,8 @@ Bash - Quick Update for Linux base Distributions
 Bash - Network and Performance Monitoring
 ## Haste 
 Bash - CTF - Set up Host file from target - Fast All Open ports
-## luz 
-Bash -
-## poke 
-Bash - Curl 
-## skellies 
+## Skellies
+Python - Generates a User name and passord - Uses hex and special characters
 
 
 
