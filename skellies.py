@@ -49,13 +49,13 @@ def write_to_file(data):
 ## Loop ##
 while True:
     try:
-        print(bcolors.PURPLE+"Welcome to Skellies Generator!"+bcolors.ENDC)
-        num_combinations=int(input(bcolors.PURPLE+"How many different username and password combinations do you want? "+ bcolors.ENDC))
+        print(bcolors.PURPLE+"Welcome to Skellies!"+bcolors.ENDC)
+        num_combinations=int(input(bcolors.PURPLE+"How many skellies do you want? "+ bcolors.ENDC))
         if num_combinations<1:
             print(bcolors.RED+"Invalid number of combinations."+bcolors.ENDC)
             continue
-        password_length=int(input(bcolors.PURPLE+"Enter the desired length of the password: "+bcolors.ENDC))
-        repeat_email=input(bcolors.PURPLE+"Do you want to repeat the same email for all combinations? (yes/no): "+bcolors.ENDC).lower()=="yes"
+        password_length=int(input(bcolors.PURPLE+"Desired length of the password: "+bcolors.ENDC))
+        repeat_email=input(bcolors.PURPLE+"Do you want all the skellies for the same email? (yes/no): "+bcolors.ENDC).lower()=="yes"
         if repeat_email:
             print("Choose an email from this list:\n",email_list)
             email=input(bcolors.PURPLE+"Email: "+bcolors.ENDC).lower()
