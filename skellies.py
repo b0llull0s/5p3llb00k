@@ -37,11 +37,9 @@ def generate_hex_email(email, hexname_length):
         return hexname+"@"+email+".me"
     else:
         return hexname+"@"+email+".com"
-
 def generate_password(password_length):
     all_characters=string.ascii_letters+string.digits+string.punctuation
     return ''.join(secrets.choice(all_characters) for _ in range(password_length))
-
 def write_to_file(data):
     with open("skellies.txt", "a") as file:
         file.write(data+"\n")
