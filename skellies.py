@@ -55,7 +55,7 @@ while True:
             print(bcolors.RED+"Invalid number of combinations."+bcolors.ENDC)
             continue
         password_length=int(input(bcolors.PURPLE+"Desired length of the password: "+bcolors.ENDC))
-        repeat_email=input(bcolors.PURPLE+"Do you want all the skellies for the same email? (yes/no): "+bcolors.ENDC).lower()=="yes"
+        repeat_email=input(bcolors.PURPLE+"Do you want all the skellies for the same email provider? (yes/no): "+bcolors.ENDC).lower()=="yes"
         if repeat_email:
             print("Choose an email from this list:\n",email_list)
             email=input(bcolors.PURPLE+"Email: "+bcolors.ENDC).lower()
