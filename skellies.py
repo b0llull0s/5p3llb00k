@@ -21,28 +21,35 @@ import os
 #                                                        #
 # Github: https://github.com/b0llull0s                    #
 ###########################################################
+
 # Colors for styling
 class bcolors:
     PURPLE='\033[95m'
     BLUE='\033[94m'
     RED='\033[91m'
     ENDC='\033[0m'
+
 ## Variables ##
 hex_characters='0123456789abcdef'
 email_list=["gmail","yahoo","outlook","proton"]
+
 ## Functions ##
+
 def generate_hex_email(email, hexname_length):
     hexname=''.join(secrets.choice(hex_characters) for _ in range(hexname_length))
     if email=="proton":
-        return hexname+"@"+email+".me"
+        return f"hexname+@+email+.me"
     else:
-        return hexname+"@"+email+".com"
+        return f"hexname+@+email+.com"
+     
 def generate_password(password_length):
     all_characters=string.ascii_letters+string.digits+string.punctuation
     return ''.join(secrets.choice(all_characters) for _ in range(password_length))
+ 
 def write_to_file(data):
     with open("skellies.txt", "a") as file:
         file.write(data+"\n")
+     
 ## Loop ##
 while True:
     try:
