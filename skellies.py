@@ -11,10 +11,10 @@ import os
 #          harness GPL enchanted components                 #
  #                                                          #
 # Description:                                             # 
-# Summons hexadecimal                                     #
+# Summons a horde                                         #
 # Special funeral                                        #
 # Upon Bones                                              #
-# Dust Hex                                                 #
+# Of Dusted Hex                                            #
 ## Usage ##                                               #
 #   ./skellies.sh                                        #
 ## Open skellies.txt ##                                   #
