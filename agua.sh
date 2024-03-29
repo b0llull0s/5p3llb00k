@@ -26,7 +26,7 @@ if [ "$execute_flag" == "yes" ]; then
     exit
 fi
 #CHECK PORTS
-sudo ss -tuln  
+ss -tuln  
 #BLEACHBIT
 read -p "Crash? (yes/no): " choice
 if [[ $choice == "yes" ]]; then
