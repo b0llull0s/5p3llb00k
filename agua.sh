@@ -35,5 +35,4 @@ elif [[ $choice == "no" ]]; then
     echo "Operation canceled."
 fi
 #PROCESS
-htop
 ps -auxwf
