@@ -27,12 +27,6 @@ if [ "$execute_flag" == "yes" ]; then
 fi
 #CHECK PORTS
 ss -tuln  
-#BLEACHBIT
-read -p "Crash? (yes/no): " choice
-if [[ $choice == "yes" ]]; then
-        sudo bleachbit
-elif [[ $choice == "no" ]]; then
-    echo "Operation canceled."
-fi
+
 #PROCESS
 ps -auxwf
