@@ -14,7 +14,7 @@ Bash - Cache Management - Requires `scrub` and `shred`
 ## Thump
 Bash - Download a file using a HTTP server through `/dev/tcp`
 ## St1ng
-Bash - Download a file and use `ncat` to create and inbound connection to target or runs in listen mode
+Bash - Download a file and use `ncat` to create and inbound connection to target or runs `ncat` in listening mode
 ## Lapsus
 Bash - 
 
