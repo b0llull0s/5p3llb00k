@@ -13,5 +13,6 @@ Python - Parses crypto invesment data - Calculates profit in base of a given pri
 Bash - Cache Management - Requires `scrub` and `shred`
 ## Thump
 Bash - Download a file using a HTTP server through `/dev/tcp`
-
+## Lapsus
+Bash - 
 
