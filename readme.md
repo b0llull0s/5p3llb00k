@@ -11,6 +11,7 @@ Python - Generates Usernames and passwords for an email address - Uses hex and s
 Python - Parses crypto invesment data - Calculates profit in base of a given price
 ## Cach3raser
 Bash - Cache Management - Requires `scrub` and `shred`
-
+## Thump
+Bash - Download a file from a given web server through /dev/tcp
 
 
