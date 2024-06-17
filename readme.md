@@ -12,6 +12,6 @@ Python - Parses crypto invesment data - Calculates profit in base of a given pri
 ## Cach3raser
 Bash - Cache Management - Requires `scrub` and `shred`
 ## Thump
-Bash - Download a file from a given web server through /dev/tcp
+Bash - Download a file using a HTTP server through `/dev/tcp`
 
 
