@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# usage
+usage() {
+    echo "Usage: $0 -d server_ip -p port -f file_path"
+    exit 1
+}
+
+# Parsing loop
+while getopts "d:p:f:" opt; do
+    case ${opt} in
+        d )
+            SERVER_IP=$OPTARG
+            ;;
+        p )
+            SERVER_PORT=$OPTARG
+            ;;
+        f )
+            FILE_PATH=$OPTARG
+            ;;
+        * )
+            usage
+            ;;
+    esac
+done
+
+# Validating loop
+if [ -z "$SERVER_IP" ] || [ -z "$SERVER_PORT" ] || [ -z "$FILE_PATH" ]; then
+    usage
+fi
+
+# /dev/tcp
+exec 3<>/dev/tcp/$SERVER_IP/$SERVER_PORT
+# GET Request
+echo -e "GET /$FILE_PATH HTTP/1.1\nHost: $SERVER_IP\nConnection: close\n\n" >&3
+# Print the Response
+cat <&3
+# Close the connection
+exec 3>&-
+exec 3<&-
