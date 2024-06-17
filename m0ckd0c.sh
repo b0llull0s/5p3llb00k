@@ -22,7 +22,7 @@ echo "        ...   . ..       .,,..''                .'.,;,'..    ...  ...,."
 echo "               ............;,.,,.       ..      ''',,....  ...'.....'.."
 echo "                    .........'''.      .'.     ..''.... ........   .."
 echo "                     ...''.';:;;;;'...;:;,'....;':;,','  .;,..                  .."
-# Thump - By b0llull0s
+# M0ckd0c - By b0llull0s
 # usage
 usage() {
     echo "Usage: $0 -d server_ip -p port -f file_path"
