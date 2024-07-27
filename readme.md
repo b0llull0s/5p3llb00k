@@ -2,7 +2,7 @@
 ## Up 
 Bash - Quick Update for Linux base Distributions
 ## Agua - REWORK/UPDATE soon
-Bash - Deffensive Security Log automation - Threat Hunting mode 
+Python - Deffensive Security Log automation - Threat Hunting mode 
 ## Haste
 Bash - CTF - Set up Host file from target - Fast All Open ports
 ## Skellies
