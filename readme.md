@@ -1,8 +1,8 @@
 # List of Spells
 ## Up 
 Bash - Quick Update for Linux base Distributions
-## Agua
-Bash - Network and Performance Monitoring
+## Agua - REWORK/UPDATE soon
+Bash - Deffensive Security Log automation - Threat Hunting mode 
 ## Haste
 Bash - CTF - Set up Host file from target - Fast All Open ports
 ## Skellies
@@ -15,6 +15,7 @@ Bash - Cache Management - Requires `scrub` and `shred`
 Bash - Download a file using a HTTP server through `/dev/tcp`
 ## Thump
 Bash - Download a file and use `ncat` to create and inbound connection to target or runs `ncat` in listening mode
-## Lapsus
+## Lapsus - 
 Bash - 
-
+## Gl1nt - WORKING PROGRESS
+Bash - Recon Automation tool
