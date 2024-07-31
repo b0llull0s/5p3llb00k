@@ -21,3 +21,5 @@ Bash -
 Bash - Recon Automation tool
 ## T1m3st0mp3r
 Python - Timestamp calculator and converter for Windows system files and Unix Epoch
+## R3s1z3r
+Python - Calculates the correct dimensions for resizing an image to fit within a specified width and/or height
