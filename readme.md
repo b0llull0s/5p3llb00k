@@ -21,3 +21,5 @@ Python - Generates and encodes Node.js reverse shell, bind shell, and command ex
 Bash - Recon Automation tool
 ## T1m3st0mp3r
 Python - Timestamp calculator and converter for Windows system files and Unix Epoch
+## Prism
+Python - Calculates the specificity score of CSS selectors from rules in a given CSS file
