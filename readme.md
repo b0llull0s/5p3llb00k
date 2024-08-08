@@ -16,10 +16,10 @@ Bash - Download a file using a HTTP server through `/dev/tcp`
 ## Thump
 Bash - Download a file and use `ncat` to create and inbound connection to target or runs `ncat` in listening mode
 ## Str0ke 
-Python - Generates and encodes Node.js reverse shell, bind shell, and command execution with SSL/TLS support.
+Python - Generates and encodes `Node.js` reverse shell, bind shell, and command execution with `SSL/TLS` support.
 ## Gl1nt - WORKING PROGRESS
 Bash - Recon Automation tool
 ## T1m3st0mp3r
-Python - Timestamp calculator and converter for Windows system files and Unix Epoch
+Python - Timestamp calculator and converter for Windows system files and `Unix Epoch`
 ## Prism
-Python - Calculates the specificity score of CSS selectors from rules in a given CSS file
+Python - Calculates the specificity score of `CSS` selectors from rules in a given `CSS` file
