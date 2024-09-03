@@ -5,22 +5,31 @@ import stat
 import argparse
 import logging
 import subprocess
-
 # Idea is to make the script close all the port with IP tables/ufw when the file integrity changes without disrupting normal network activity
 # Also ellaborate on the parsing with logic rules
 # Add tcp and tshark capabilities
+def colors():
+    G = '\033[92m'  # green
+    Y = '\033[93m'  # yellow
+    B = '\033[94m'  # blue
+    R = '\033[91m'  # red
+    W = '\033[0m'   # white
+
+
+
+
 
 
 # Define the directories to monitor
-DEFAULT_DIRECTORIES_TO_MONITOR = ["/etc", "/var/log", "/bin", "/sbin", "/usr/bin", "/usr/sbin", "/root", "/home", "/var/www"]
+MONITOR_DIR = ["/etc", "/var/log", "/bin", "/sbin", "/usr/bin", "/usr/sbin", "/root", "/home", "/var/www"]
 
 # Define the hash function to use
-DEFAULT_HASH_FUNC = hashlib.sha256
+HASH_FUNC = hashlib.sha256
 
 # Define Arguments
 def get_args():
     parser = argparse.ArgumentParser(description='Monitor specified directories for file modifications')
-    parser.add_argument('-d', '--directories', nargs='+', default=DEFAULT_DIRECTORIES_TO_MONITOR,
+    parser.add_argument('-d', '--directories', nargs='+', default=MONITOR_DIR,
                         help='directories to monitor (default: %(default)s)')
     parser.add_argument('-f', '--hash-func', default='sha256',
                         help='hash function to use (default: %(default)s)')
@@ -89,7 +98,7 @@ def monitor_directories(directories, hash_func, interval):
 
 # Network/System Monitoring Funtion
 
-def check_ports_and_processes():
+def check_ports_and_processes(): # ADD PARSING
     # CHECK PORTS
     print("Checking ports:")
     result_ports = subprocess.run(['ss', '-tuln'], capture_output=True, text=True)
