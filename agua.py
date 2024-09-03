@@ -5,9 +5,11 @@ import stat
 import argparse
 import logging
 import subprocess
-# Idea is to make the script close all the port with IP tables/ufw when the file integrity changes without disrupting normal network activity
-# Also ellaborate on the parsing with logic rules
-# Add tcp and tshark capabilities
+
+# Record and Monitor file integrity With a notification
+# Ellaborate parsing and logic rules
+# Add notifications for changes/Crontask
+
 def colors():
     G = '\033[92m'  # green
     Y = '\033[93m'  # yellow
@@ -112,22 +114,6 @@ def check_ports_and_processes(): # ADD PARSING
     print(processes_output)
 
     return ports_output, processes_output
-
-# IP tables function
-# NEED TO WORK ON
-def setup_iptables(accept=False):
-    # IPTABLES TO DROP
-    subprocess.run(['sudo', 'iptables', '-F'])
-    subprocess.run(['sudo', 'iptables', '-P', 'INPUT', 'DROP'])
-    subprocess.run(['sudo', 'iptables', '-P', 'FORWARD', 'DROP'])
-    subprocess.run(['sudo', 'iptables', '-P', 'OUTPUT', 'DROP'])
-
-    if accept:
-        print("Flow")
-        subprocess.run(['sudo', 'iptables', '-P', 'INPUT', 'ACCEPT'])
-        subprocess.run(['sudo', 'iptables', '-P', 'FORWARD', 'ACCEPT'])
-        subprocess.run(['sudo', 'iptables', '-P', 'OUTPUT', 'ACCEPT'])
-
 
 # Main Function
 
