@@ -7,8 +7,6 @@ Bash - CTF - Set up Host file from target - Fast All Open ports
 Python - Generates Usernames and passwords for an email address - Uses hex and special characters
 ## Black L0tus
 Python - Parses crypto invesment data - Calculates profit in base of a given price
-## Cach3raser
-Bash - Cache Management - Requires `scrub` and `shred`
 ## M0ckd0c
 Bash - Download a file using a HTTP server through `/dev/tcp`
 ## Thump
