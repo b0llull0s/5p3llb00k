@@ -1,6 +1,4 @@
 # List of Spells
-## Up 
-Bash - Quick Update for Linux base Distributions
 ## Agua - REWORK/UPDATE soon
 Python - Deffensive Security Log automation - Threat Hunting mode 
 ## Haste
