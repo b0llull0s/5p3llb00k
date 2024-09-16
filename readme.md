@@ -15,8 +15,6 @@ Bash - Cache Management - Requires `scrub` and `shred`
 Bash - Download a file using a HTTP server through `/dev/tcp`
 ## Thump
 Bash - Download a file and use `ncat` to create and inbound connection to target or runs `ncat` in listening mode
-## Gl1nt - WORKING PROGRESS
-Bash - Recon Automation tool
 ## T1m3st0mp3r
 Python - Timestamp calculator and converter for Windows system files and `Unix Epoch`
 ## Prism
