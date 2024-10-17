@@ -1,32 +1,6 @@
 #!/bin/bash
 ###########################################################
- #               Haste Spell                              #
-#                                                          #
-# Author: b0llull0s                                       #
-# 5p3llb00k Repository: https://github.com/b0llull0s/5p3llb00k #
-# License: The Mystic MIT License for original incantations,#
- #          and the Enchanted GPL for combined spells that   #
-#          harness GPL enchanted components                 #
- #                                                          #
-# Description:                                             # 
-# This enchanted spell, "Haste", accelerates the innitial #
-# processes during CTF. Allowing you to swiftly explore   #
-# arcane networks.                                         #
- #                                                          #
-## Usage ##                                                  #
-#   ./haste.sh [IP] [Name]                                    #
-## Usage examples ##                                        #
-#   - ./haste.sh 10.10.1.20 lame.htb                       #
- #                                                          #
-#   The spell will swiftly reveal the mystic secrets of    #
- #  the target network.                                     #
-#                                                          #
-## Note:                                                   #
-#   This enchanted spell is provided as-is without any      #
- #   warranties. You are free to use, modify, and          #
-#   distribute it, but beware of the magical consequences.#
-#                                                          #
-# Github: https://github.com/b0llull0s                    #
+# by b0llull0s                                            #
 ###########################################################
 echo "      .. ..',..''''','',,,,,,,,,,',,,,'.,,',,,,,,;,,,,,,,,,,,,'.',,'.  ..."
 echo "       .   ..'...'.,'''''',,;;;,,,,;,,''.',';,,,;;;;;,,,,,,'......,'.    .."
